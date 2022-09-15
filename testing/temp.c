@@ -1,19 +1,57 @@
 #include <stdio.h>
 
-int main(void) {
 
-    //rand()% 100 + 20 gets you random numbers between 20 - 29
+    /* int A[2][2]; */
 
-    int i;
-    int Fibonacci[15];
+    /* int B[2][3]; */
 
-    Fibonacci[0] = 0;
-    Fibonacci[1] = 1;
+    /* int C[2][3]; */
 
-    for (i = 2; i < 15; i++) {
-        Fibonacci[i] = Fibonacci[i - 1] + Fibonacci[i-2];
-        printf("%d\n", Fibonacci[i]);
+    /* A[0][0] = 1; */
+    /* A[0][1] = 2; */
+    /* A[1][0] = 3; */
+    /* A[1][1] = 4; */
+
+    /* B[0][0] = 1; */
+    /* B[0][1] = 2; */
+    /* B[0][2] = 3; */
+    /* B[1][0] = 4; */
+    /* B[1][1] = 5; */
+    /* B[1][2] = 6; */
+
+    /* C[0][0] = A[0][0] * B[0][0] + A[0][1] * B[1][0]; */
+    /* C[0][1] = A[0][0] * B[0][1] + A[0][1] * B[1][1]; */
+    /* C[0][2] = A[0][0] * B[0][2] + A[0][1] * B[1][2]; */
+
+    /* C[1][0] = A[1][0] * B[0][0] + A[1][1] * B[1][0]; */
+    /* C[1][1] = A[1][0] * B[0][1] + A[1][1] * B[1][1]; */
+    /* C[1][2] = A[1][0] * B[0][2] + A[1][1] * B[1][2]; */
+
+    /* printf("{%.2d ", C[0][0]); */
+    /* printf("%.2d ", C[0][1]); */
+    /* printf("%.2d}\n", C[0][2]); */
+    /* printf("{%d ", C[1][0]); */
+    /* printf("%d ", C[1][1]); */
+    /* printf("%d}\n", C[1][2]); */
+
+    /* void sum(void) first void means it returns no value second void means that it takes no parameters*/
+
+
+    int power(int x, int y) {
+        int i;
+        int final;
+        for (i = 1; i <= y; i++ ) {
+             final = x * i;
+        }
+        return final;
     }
 
-
-}
+    int main(void) {
+        int x, y;
+        int final;
+        scanf("%d", &x);
+        scanf("%d", &y);
+        int temp = 0;
+        final = power(x, y);
+        printf("%d\n", final);
+    }
